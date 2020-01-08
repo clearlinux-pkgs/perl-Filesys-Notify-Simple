@@ -4,10 +4,10 @@
 #
 Name     : perl-Filesys-Notify-Simple
 Version  : 0.14
-Release  : 11
+Release  : 12
 URL      : https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Filesys-Notify-Simple-0.14.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Filesys-Notify-Simple-0.14.tar.gz
-Summary  : Simple and dumb file system watcher
+Summary  : 'Simple and dumb file system watcher'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 Requires: perl-Filesys-Notify-Simple-perl = %{version}-%{release}
@@ -31,7 +31,6 @@ $event->{path} # full path of the file updated
 Summary: dev components for the perl-Filesys-Notify-Simple package.
 Group: Development
 Provides: perl-Filesys-Notify-Simple-devel = %{version}-%{release}
-Requires: perl-Filesys-Notify-Simple = %{version}-%{release}
 Requires: perl-Filesys-Notify-Simple = %{version}-%{release}
 
 %description dev
@@ -92,4 +91,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Filesys/Notify/Simple.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Filesys/Notify/Simple.pm
