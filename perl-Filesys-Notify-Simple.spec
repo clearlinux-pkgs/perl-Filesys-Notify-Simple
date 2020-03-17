@@ -4,12 +4,13 @@
 #
 Name     : perl-Filesys-Notify-Simple
 Version  : 0.14
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Filesys-Notify-Simple-0.14.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Filesys-Notify-Simple-0.14.tar.gz
 Summary  : 'Simple and dumb file system watcher'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
+Requires: perl-Filesys-Notify-Simple-license = %{version}-%{release}
 Requires: perl-Filesys-Notify-Simple-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Test::SharedFork)
@@ -35,6 +36,14 @@ Requires: perl-Filesys-Notify-Simple = %{version}-%{release}
 
 %description dev
 dev components for the perl-Filesys-Notify-Simple package.
+
+
+%package license
+Summary: license components for the perl-Filesys-Notify-Simple package.
+Group: Default
+
+%description license
+license components for the perl-Filesys-Notify-Simple package.
 
 
 %package perl
@@ -72,6 +81,8 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Filesys-Notify-Simple
+cp %{_builddir}/Filesys-Notify-Simple-0.14/LICENSE %{buildroot}/usr/share/package-licenses/perl-Filesys-Notify-Simple/6eee64e6240eb3496293e0e3a8d568e984e4f1fa
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -89,6 +100,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 %defattr(-,root,root,-)
 /usr/share/man/man3/Filesys::Notify::Simple.3
 
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Filesys-Notify-Simple/6eee64e6240eb3496293e0e3a8d568e984e4f1fa
+
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/Filesys/Notify/Simple.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Filesys/Notify/Simple.pm
