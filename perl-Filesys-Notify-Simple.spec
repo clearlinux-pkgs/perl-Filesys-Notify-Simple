@@ -4,7 +4,7 @@
 #
 Name     : perl-Filesys-Notify-Simple
 Version  : 0.14
-Release  : 21
+Release  : 22
 URL      : https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Filesys-Notify-Simple-0.14.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Filesys-Notify-Simple-0.14.tar.gz
 Summary  : 'Simple and dumb file system watcher'
